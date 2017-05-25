@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.example.ramesh.internshala.Home">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF6347"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@android:color/white"
+        ></android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:text="To access all features,Continue to:"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="138dp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:id="@+id/button"
+        android:background="#FF6347"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_alignEnd="@+id/textView7"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/button2"
+        android:background="#FF6347"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layerType="software"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Layers/Law Firm"
+        android:id="@+id/textView4"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Learn Law"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="File Complaint"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView4"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        
+        android:text="My Cases"
+        android:id="@+id/textView7"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_below="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        
+        android:text="My Advocate"
+        android:id="@+id/textView8"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        
+        android:text="Legal Services"
+        android:id="@+id/textView9"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        
+        android:text="Panic Center"
+        android:id="@+id/textView10"
+        android:padding="10dp"
+        android:textColor="#FF6347"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:background="@drawable/dotted_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:text="Court Judgement"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FF6347"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:text="Power of Law is in your hands!"
+        android:id="@+id/textView12"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8" />
+
+</RelativeLayout>
