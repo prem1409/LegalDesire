@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.msp.legaldesire.Admin_Module.Lawyer_Module">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/edit_namefield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:maxLength="40"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edit_emailfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_namefield"
+        android:maxLength="40"
+        android:hint="Enter Email"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edit_addressfield"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_emailfield"
+        android:hint="Enter Address"
+        android:maxLength="40"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/wrap_typeandrating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_addressfield">
+
+        <EditText
+            android:id="@+id/edit_ratingfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/edit_addressfield"
+            android:layout_weight="2"
+            android:hint="Enter Rating"
+            android:textSize="16sp" />
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="| Type:"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/dialog_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_weight="1"
+            android:entries="@array/Type2"
+            android:prompt="@string/spinner4"
+            android:spinnerMode="dialog"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrap_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrap_typeandrating"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/edit_latitudefield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="10"
+            android:inputType="numberDecimal"
+            android:hint="Latitude"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_longitudefield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLength="10"
+            android:inputType="numberDecimal"
+            android:hint="Longitude"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrap_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrap_location"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btn_enterdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Insert"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_viewdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/user_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrap_buttons"
+        android:textSize="10sp"></ListView>
+
+
+</RelativeLayout>

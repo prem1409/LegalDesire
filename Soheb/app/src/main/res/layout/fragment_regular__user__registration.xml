@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.msp.legaldesire.Regular_User_Registration">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/edit_regular_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_regular_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_regular_email"
+        android:hint="Enter Name" />
+
+    <EditText
+        android:id="@+id/edit_regular_contact_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_regular_name"
+        android:hint="Enter Contact No"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_regular_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_regular_contact_no"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:textSize="25sp" />
+
+</RelativeLayout>

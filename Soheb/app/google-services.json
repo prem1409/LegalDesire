@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "603535374831",
+    "firebase_url": "https://legaldesire-26b09.firebaseio.com",
+    "project_id": "legaldesire-26b09",
+    "storage_bucket": "legaldesire-26b09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603535374831:android:3a61e4287a6b1c08",
+        "android_client_info": {
+          "package_name": "com.example.msp.legaldesire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603535374831-7tg4csb96g39ahlphvhuvcvhufpq2fk1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.msp.legaldesire",
+            "certificate_hash": "c839463e8923084aa367352aead30ee419bc5942"
+          }
+        },
+        {
+          "client_id": "603535374831-2fd3kv53kdnlhfeons74u3btkgbedhm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzKGuZYU4Kvmf7Qf0LI167acvEV0ouu50"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603535374831-2fd3kv53kdnlhfeons74u3btkgbedhm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_namefield2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:maxLength="40"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/edit_emailfield2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_namefield2"
+        android:hint="Enter Email"
+        android:maxLength="40"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/edit_addressfield2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_emailfield2"
+        android:hint="Enter Address"
+        android:maxLength="40"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/wrap_typeandrating2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_addressfield2">
+
+        <EditText
+            android:id="@+id/edit_ratingfield2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_addressfield2"
+            android:layout_weight="2"
+            android:hint="Enter Rating"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="| Type:"
+            android:textSize="10sp" />
+
+        <Spinner
+            android:id="@+id/dialog_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/Type2"
+            android:prompt="@string/spinner4"
+            android:spinnerMode="dialog"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrap_location2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wrap_typeandrating2"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/edit_latitudefield2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Latitude"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/edit_longitudefield2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Longitude"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wrap_buttons2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrap_location2">
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

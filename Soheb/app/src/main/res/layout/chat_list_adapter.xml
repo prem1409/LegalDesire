@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <!-- <ImageView
+         android:id="@+id/image_profilepic"
+         android:src="@drawable/ic_menu_gallery"
+
+         android:layout_width="45dp"
+         android:layout_height="45dp" /> -->
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        android:src="@drawable/ic_menu_gallery" />
+
+
+    <TextView
+        android:id="@+id/chat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:gravity="center"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/new_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chat_name"
+        android:background="@drawable/roundedcorner3"
+        android:text="New Message"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>
