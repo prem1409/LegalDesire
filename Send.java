@@ -29,9 +29,16 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * Created by hp on 5/8/2017.
@@ -44,6 +51,7 @@ public class Send extends Fragment implements GoogleApiClient.ConnectionCallback
     GoogleApiClient mGoogleApiClient;
     //protected TextView address_text;
     private Button button, b;
+    protected String contact="";
 
     @Nullable
     @Override
@@ -66,6 +74,9 @@ public class Send extends Fragment implements GoogleApiClient.ConnectionCallback
             }
         });
         // Create an instance of GoogleAPIClient
+        /*if(isOnline()==true){
+            access_contacts();
+        }*/
     }
 
     private void call_police() {
@@ -73,6 +84,7 @@ public class Send extends Fragment implements GoogleApiClient.ConnectionCallback
         Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse(url));
         startActivity(i);
     }
+
 
     protected synchronized void buildGoogleApiClient() {
 
@@ -130,9 +142,9 @@ public class Send extends Fragment implements GoogleApiClient.ConnectionCallback
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (mLastLocation != null) {
                     String address = getCompleteAddressString(mLastLocation.getLatitude(), mLastLocation.getLongitude());
-                    //address_text.setText(address);
                     sendSmsMessage(address);
                 } else {
 
@@ -173,24 +185,42 @@ public class Send extends Fragment implements GoogleApiClient.ConnectionCallback
         return strAdd;
     }
 
-    protected void sendSmsMessage(String address) {
-        //String contact = Register.pass_contact();
-        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-        smsIntent.setData(Uri.parse("smsto:"));
-        smsIntent.putExtra("address", new String(""));
-        smsIntent.setType("vnd.android-dir/mms-sms");
-        smsIntent.putExtra("sms_body", "Panic situation in this area...\nPlease help...\nLocation:" + address);
+    protected void sendSmsMessage(final String address) {
 
-        try {
-            startActivity(smsIntent);
-            getActivity().finish();
-            Log.i("Finished sending SMS...", "");
-            //Toast.makeText(getActivity(), "SMS sent.", Toast.LENGTH_LONG).show();
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(getActivity(),
-                    "SMS failed, please try again later.", Toast.LENGTH_LONG).show();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        final String email = "vaishalig714gmailcom";
+        for(int i =1; i <=5; i++) {
+            final int i1 = i;
+            final DatabaseReference child = mDatabase.child("users").child("lawyer").child(email).child("Contact"+String.valueOf(i));
+            child.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot != null || dataSnapshot.getChildren() != null) {
+                        contact = contact + dataSnapshot.getValue().toString() + ",";
+                        if(i1==5) {
+                            Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                            smsIntent.setData(Uri.parse("smsto:"));
+                            smsIntent.putExtra("address", contact);
+                            smsIntent.setType("vnd.android-dir/mms-sms");
+                            smsIntent.putExtra("sms_body", "Panic situation in this area...\nPlease help...\nLocation:" + address);
+                            try {
+                                startActivity(smsIntent);
+                                getActivity().finish();
+                                Log.i("Finished sending SMS...", "");
+                            } catch (android.content.ActivityNotFoundException ex) {
+                                Toast.makeText(getActivity(),
+                                        "SMS failed, please try again later.", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        }
+                    }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
         }
-
     }
 
     public boolean isOnline() {

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "707145126664",
+    "firebase_url": "https://new-project-39e04.firebaseio.com",
+    "project_id": "new-project-39e04",
+    "storage_bucket": "new-project-39e04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707145126664:android:4e503d5857a73837",
+        "android_client_info": {
+          "package_name": "com.example.legaldesire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707145126664-dt32scl6gg9doglk56i0j1ag9qeem8vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi1RsNPYwpyS_d_SWZXR0KFZE_3pgkBDg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
