@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "438950451949",
+    "firebase_url": "https://legal-desire-e5f23.firebaseio.com",
+    "project_id": "legal-desire-e5f23",
+    "storage_bucket": "legal-desire-e5f23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438950451949:android:5d466667dfe53451",
+        "android_client_info": {
+          "package_name": "com.example.ramesh.internshala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438950451949-m6p4ulmoei3t2cj2l2h1bk50urhh7t3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPs32NnzWyFLS_caTwY0BJpf2J6UrcRbc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

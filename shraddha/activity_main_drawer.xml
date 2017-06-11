@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/register"
+            android:title="Register and Login" />
+        <item
+            android:id="@+id/user_p"
+            android:title="User Profile" />
+        <item
+            android:id="@+id/user_f"
+            android:title="User Features" />
+        <item
+            android:id="@+id/online_lib"
+            android:title="Online Library" />
+        <item
+            android:id="@+id/complaint"
+            android:title="Complaint Center" />
+        <item
+            android:id="@+id/panic"
+            android:title="Panic Center" />
+        <item
+            android:id="@+id/service"
+            android:title="Service Center"/>
+        <item
+            android:id="@+id/news"
+            android:title="News"/>
+        <item
+            android:id="@+id/judgements"
+            android:title="Judgements"/>
+        <item
+            android:id="@+id/video_center"
+            android:title="video aids"/>
+    </group>
+
+
+</menu>
